@@ -1,0 +1,31 @@
+$c-primary: #009fe3;
+
+.marker {
+  color: yellow;
+}
+
+ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.reveal {
+  h3 {
+    color: $c-primary;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  h6 {
+    font-size: .7em;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  section img {
+    background: transparent;
+    border: none;
+  }
+}

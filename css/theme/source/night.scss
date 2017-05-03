@@ -12,23 +12,23 @@
 
 
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Signika:400);
 
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #111;
 
-$mainFont: 'Open Sans', sans-serif;
-$linkColor: #e7ad52;
+$mainFont: 'Signika', sans-serif;
+$linkColor: #009fe3;
 $linkColorHover: lighten( $linkColor, 20% );
-$headingFont: 'Montserrat', Impact, sans-serif;
+$headingFont: 'Signika', sans-serif;
 $headingTextShadow: none;
-$headingLetterSpacing: -0.03em;
+$headingLetterSpacing: 0;
 $headingTextTransform: none;
-$selectionBackgroundColor: #e7ad52;
+$selectionBackgroundColor: #009fe3;
 
 
 // Theme template ------------------------------
 @import "../template/theme";
+@import "custom";
 // ---------------------------------------------
