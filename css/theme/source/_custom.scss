@@ -1,15 +1,10 @@
 $c-primary: #009fe3;
 
-.marker {
-  color: yellow;
-}
-
-ul li {
-  list-style-type: none;
-  text-align: center;
-}
-
 .reveal {
+  .marker {
+    color: yellow;
+  }
+
   h3 {
     color: $c-primary;
     font-size: 1.3em;
@@ -22,6 +17,16 @@ ul li {
 
   ul {
     margin: 0;
+
+    li {
+      list-style-type: dot;
+      font-size: .8em;
+    }
+  }
+
+  small {
+    display: block;
+    margin-top: 28px;
   }
 
   section img {

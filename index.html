@@ -31,6 +31,7 @@
 						<img src="lib/images/sui-logo.png" alt="">
 						<h3>theme-basic</h3>
 						<h6>not that <strong>basic</strong> after all</h6>
+						<h6 class="marker">by David Garcia</h6>
 					</section>
 					<section>
 						<img src="lib/images/sui-logo.png" width="100px" alt="">
@@ -39,8 +40,8 @@
 					</section>
 					<section>
 						<img src="lib/images/sui-logo.png" width="100px" alt="">
-						<h3>How theme-basic styling works?</h3>
-							<p>Provides a global re-writable set of Sass Vars</p>
+						<h3>Generic Sass vars</h3>
+							<p>Provides a global re-writable set of Sass Vars with default values</p>
 								<pre>
 									<code data-trim data-noescape>
 // --- Colors --- //
@@ -51,6 +52,22 @@ $c-primary-dark: #003661 !default;
 $c-highlighted: #f2cd96 !default;
 									</code>
 								</pre>
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>Components based on Mixins</h3>
+							<p>All UI components must be implemented using a parametrizable mixin</p>
+								<pre>
+									<code data-trim data-noescape>// Sui Button Component
+@mixin sui-button(
+  $type: 'primary',
+  $size: 'medium',
+  $background-color: $c-gray-dark,
+  $color: $c-white,
+  $icon-fill: transparent,
+  $icon-stroke: $c-white
+)</code></pre>
 					</section>
 
 					<section>
@@ -70,8 +87,37 @@ $c-button-accent-icon-stroke: $c-white !default;
 
 					<section>
 						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>Components: <span class="marker">implementation</span></h3>
+						<p>Use the mixin only to define sui-button and re-write its sass vars</p>
+						<pre>
+							<code>.my-FiltersBtn {
+   &--small {
+     @include sui-button('accent', 'small');
+   }
+}</code></pre>
+					<small>Checkout the code <a href="https://github.com/SUI-Components/theme-basic/blob/master/src/components/_button.scss" target="_blank">here</a></small>
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>Generic Mixins</h3>
+							<p>A set of Sass tools like mixins, functions and helpers to provide common solutions</p>
+								<pre>
+									<code data-trim data-noescape>
+// Reset link
+
+@mixin reset-link {
+  color: $c-text-base;
+  text-decoration: none;
+}
+									</code>
+								</pre>
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
 						<h3>Cross site global design</h3>
-							<p>Applies global SUI-Components style guide</p>
+							<p>Applies global <span class="marker">SUI-Components</span> style guide</p>
 							<img src="lib/images/sui-button.png" alt="">
 					</section>
 
@@ -121,7 +167,35 @@ $breakpoints: (
 						<p>Normalizes form elements default styling into a cross site version</p>
 						<img src="lib/images/inputs.png" alt="">
 					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>theme-basic Tools: <span class="marker">Images</span></h3>
+						<p>Aspect ratio adapter</p>
+						<pre><code>@include aspect-ratio($horizontal, $vertical);</code></pre>
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>theme-basic Tools: <span class="marker">Layout</span></h3>
+						<p>Flexbox based Grid system</p>
+						<ul>
+							<li>Custom gutter and container type</li>
+							<li>Fixed or dynamic column number</li>
+						</ul>
+						<small>Checkout the code <a href="https://github.com/SUI-Components/theme-basic/blob/master/src/layout/_grid.scss" target="_blank">here</a></small>
+					</section>
+
 				</section>
+
+				<section>
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h2>Thank you!</h2>
+						<img src="lib/images/cat.gif" />
+					</section>
+				</section>
+
 			</div>
 		</div>
 
