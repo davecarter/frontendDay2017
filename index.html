@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<img src="lib/images/sui-logo.png" alt="">
+						<h3>theme-basic</h3>
+						<h6>not that <strong>basic</strong> after all</h6>
+					</section>
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>What is theme-basic?</h3>
+						<p>A comprehensive set of Sass tools to shape and style <strong>SUI-Components</strong></p>
+					</section>
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>How theme-basic styling works?</h3>
+							<p>Provides a global re-writable set of Sass Vars</p>
+								<pre>
+									<code data-trim data-noescape>
+// --- Colors --- //
+
+$c-primary-light: #80a9ca !default;
+$c-primary: #005496 !default;
+$c-primary-dark: #003661 !default;
+$c-highlighted: #f2cd96 !default;
+									</code>
+								</pre>
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>Parametizable components</h3>
+							<p>Every component may have its own parametized set of <strong class="marker">!default vars</strong></p>
+								<pre>
+									<code data-trim data-noescape>
+// Button
+$c-button-accent: $c-white !default;
+$c-button-accent-hover: $c-white !default;
+$c-button-accent-icon-fill: $c-white !default;
+$c-button-accent-icon-stroke: $c-white !default;
+									</code>
+								</pre>
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>Cross site global design</h3>
+							<p>Applies global SUI-Components style guide</p>
+							<img src="lib/images/sui-button.png" alt="">
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>Open Sourced library</h3>
+							<p><span class="marker">theme-basic</span> is an Open source <strong style="color:darkred">npm</strong> library to style any ReactJS based project available here: <br />
+							<mark>@schibstedspain/theme-basic</mark></p>
+								<pre>
+									<code data-trim data-noescape>
+// import theme-basic sass vars and mixins
+@import '~@schibstedspain/theme-basic/lib/index';</code></pre>
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>theme-basic Tools: <span class="marker">Breakpoints</span></h3>
+						<p>Mixins with predefined breakpoint values and settings:</p>
+						<pre><code>
+$breakpoints: (
+  xxs: 0,
+  xs: 320px,
+  s: 576px,
+  m: 768px,
+  l: 992px,
+  xl: 1200px
+) !default;
+
+@include media-breakpoint-up(m) {}
+@include media-breakpoint-down(s) {}</code></pre>
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>theme-basic Tools: <span class="marker">Colors</span></h3>
+						<p>Provides a color variarion given a color and an step:</p>
+						<pre><code>$c-primary-dark: color-variation($c-primary, -1);</code></pre>
+						<img src="lib/images/color-variations.png" alt="">
+					</section>
+
+					<section>
+						<img src="lib/images/sui-logo.png" width="100px" alt="">
+						<h3>theme-basic Tools: <span class="marker">Forms</span></h3>
+						<p>Normalizes form elements default styling into a cross site version</p>
+						<img src="lib/images/inputs.png" alt="">
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
